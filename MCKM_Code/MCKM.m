@@ -79,7 +79,7 @@ if (run_admm == 1)
     options.use_kkt = 1;
     weightVec = gamma*weightVec1;
     %% max iteration number for ADMM
-    options.maxiter = 100;
+    options.maxiter = 500;
     [~,~,X_ADMM] =ADMM(Ainput,dataMatrix,dim,weightVec,options);
     merge_result=X_ADMM;
     tolClustering = options.stoptol;
